@@ -34,7 +34,9 @@ public class CheckingAccount {
   }
 
   public void withdraw(double amount) {
-    this.balance -= amount;
+    if (amount <= balance) {
+      this.balance -= amount;
+    }
   }
 
   public void deposit(double amount) {
